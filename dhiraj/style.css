@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1px;
+}
+body {
+  font-family: "Roboto";
+  background: linear-gradient(to right, #bfa7c7d2, #676ece9d);
+}
+
+/*preload*/
+.preload {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255),
+    rgb(197, 187, 187)
+  );
+  font-size: 60rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.wrapper {
+  max-height: 800rem;
+  max-width: 1500rem;
+  margin: auto;
+}
+/*heading*/
+.logo img {
+  height: 24rem;
+  width: 24rem;
+}
+
+header {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.logo {
+  position: relative;
+  top: 6rem;
+  left: 30rem;
+  font-size: 30rem;
+  letter-spacing: 1.5rem;
+  flex: 1;
+  font-weight: 600;
+  cursor: pointer;
+}
+nav {
+  flex: 3;
+  font-size: 18rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  list-style: none;
+}
+
+.nav-link {
+  color: rgb(78, 76, 76);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5rem;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-link:after {
+  bottom: 0;
+  content: "";
+  height: 4rem;
+  left: 50%;
+  position: absolute;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/*Main section*/
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30rem;
+  font-size: 40rem;
+  color: rgb(78, 76, 76);
+  font-weight: 600;
+}
+
+.glass {
+  background: white;
+  height: 80vh;
+  width: 80%;
+  border-radius: 5rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(5rem);
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  display: relative;
+  overflow: hidden;
+}
+
+#avatar img {
+  border-radius: 5rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 80vh;
+}
+#intro-name {
+  padding: 30rem;
+}
+
+#flip div div {
+  height: 60rem;
+  margin-bottom: 46rem;
+  display: inline-block;
+  border-radius: 4rem;
+}
+
+#flip {
+  height: 70rem;
+  overflow: hidden;
+}
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div:first-child div {
+  background: #4ec7f3;
+}
+#flip div:last-child div {
+  background: #81ca45;
+}
+
+#flip div div {
+  background: #42c58a;
+}
+
+/*About*/
+#about,
+#contact {
+  padding: 25rem;
+}
+#about,
+#contact h2 {
+  background: linear-gradient(to right, #656589, #644953);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30rem;
+}
+#about p {
+  background: linear-gradient(to right, #323235, #494964);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25rem;
+}
+
+#about ul {
+  width: 400rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#about ul li {
+  height: 60rem;
+  width: 60rem;
+}
+#about ul li a img {
+  height: 50rem;
+  width: 50rem;
+}
+#about ul li a img:hover {
+  position: fixed;
+  height: 60rem;
+  width: 60rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/*Gallery*/
+
+#gallery {
+  height: 77vh;
+  width: 99%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 5rem;
+  margin-bottom: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#gallery {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#gallery a img {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+#gallery a img {
+  border-radius: 4rem;
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+/*Contact*/
+#contact {
+  height: 100%;
+  width: 100%;
+}
+
+table {
+  min-height: 100%;
+  min-width: 50%;
+}
+
+table td input,
+textarea {
+  height: 20rem;
+  min-height: 80%;
+  min-width: 60%;
+}
+textarea {
+  margin-top: 20rem;
+  vertical-align: bottom;
+  height: 50rem;
+}
+button {
+  border-radius: 10rem;
+  background-color: rgb(206, 158, 194);
+  border: 1px solid white;
+  height: 25rem;
+  width: 50rem;
+}
+button a {
+  text-decoration: none;
+}
+
+/*Animations*/
+@keyframes show {
+  0% {
+    margin-top: -270rem;
+  }
+  5% {
+    margin-top: -205rem;
+  }
+  33% {
+    margin-top: -205rem;
+  }
+  38% {
+    margin-top: -100rem;
+  }
+  66% {
+    margin-top: -100rem;
+  }
+  71% {
+    margin-top: 2.5rem;
+  }
+  99.99% {
+    margin-top: 2.5rem;
+  }
+  100% {
+    margin-top: -270rem;
+  }
+}
+
+@keyframes loader {
+  from {
+    transform: translateY(10rem);
+  }
+  to {
+    transform: translate(0rem);
+  }
+}
+
+/*media-queries*/
+@media (max-width: 1248px) {
+  #avatar img {
+    width: 200rem;
+    height: 200rem;
+    object-fit: cover;
+    object-position: 10rem 1rem;
+  }
+}
+
+@media (max-width: 626px) {
+  html {
+    font-size: 4%;
+  }
+  intro-name {
+    position: relative;
+    top: -10rem;
+  }
+  #flip div:first-child div,
+  #flip div:last-child div,
+  #flip div div {
+    visibility: hidden;
+    position: relative;
+  }
+  #flip div:first-child div::after {
+    background: #4ec7f3;
+    position: absolute;
+    left: 0;
+    visibility: visible;
+    content: "Web";
+  }
+  #flip div:last-child div::after {
+    background: #81ca45;
+    position: absolute;
+    left: 0;
+    visibility: visible;
+    content: "Desingner ";
+  }
+  #flip div div::after {
+    background: #42c58a;
+    position: absolute;
+    left: 0;
+    visibility: visible;
+    content: "Developer";
+  }
+
+  #gallery img {
+    width: 50vw;
+    height: 70vh;
+  }
+}
+
+/*Additional*/
